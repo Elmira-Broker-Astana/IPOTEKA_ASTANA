@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эльмира Брокер | Ипотека в Астане за 2 часа | 20% взнос</title>
+    
+    <!-- WhatsApp превью - используем bi-preview.png -->
+    <meta property="og:title" content="Эльмира Брокер | Ипотека в Астане">
+    <meta property="og:description" content="Полное одобрение ипотеки за 2 часа. 20% первоначальный взнос. Без подтверждения дохода.">
+    <meta property="og:image" content="https://elmira-broker-astana.github.io/IPOTEKA_ASTANA/bi-preview.png">
+    <meta property="og:url" content="https://elmira-broker-astana.github.io/IPOTEKA_ASTANA/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Language switcher */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #2d3748;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            color: #2d3748;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .lang-btn:hover {
+            background: #2d3748;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Main card */
+        .main-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            margin-top: 60px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 38px;
+            font-weight: 800;
+            color: #fbbf24;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 22px;
+            font-weight: 500;
+            opacity: 0.95;
+            margin-bottom: 5px;
+            position: relative;
+        }
+        
+        .phone {
+            font-size: 26px;
+            font-weight: 700;
+            margin-top: 20px;
+            color: #fbbf24;
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Benefits */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            padding: 35px 30px;
+            background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .benefit {
+            text-align: center;
+            padding: 25px 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+        
+        .benefit:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .benefit-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #3b82f6;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .benefit-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-text {
+            color: #4b5563;
+            font-size: 15px;
+        }
+        
+        /* Form */
+        .form-section {
+            padding: 40px 30px;
+        }
+        
+        .form-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .form-subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 35px;
+            font-size: 16px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .form-group {
+            margin-bottom: 28px;
+        }
+        
+        .form-label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 12px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #d1d5db;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+        }
+        
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .btn-option {
+            padding: 18px;
+            border: 2px solid #d1d5db;
+            border-radius: 12px;
+            background: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn-option:hover {
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+        
+        .btn-option.selected {
+            border-color: #3b82f6;
+            background: #eff6ff;
+            color: #1e40af;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+        
+        .btn-yes.selected {
+            border-color: #10b981;
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .btn-no.selected {
+            border-color: #ef4444;
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        /* Submit button */
+        .submit-btn {
+            width: 100%;
+            padding: 22px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
+        }
+        
+        .submit-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .whatsapp-icon {
+            font-size: 24px;
+        }
+        
+        /* WhatsApp fixed button */
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border: 3px solid white;
+        }
+        
+        .whatsapp-fixed:hover {
+            transform: scale(1.15);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 35px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,100 L100,100 L100,0 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .footer-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .footer-text {
+            opacity: 0.9;
+            font-size: 15px;
+            margin-top: 10px;
+            position: relative;
+        }
+        
+        /* Скрываем неактивный язык */
+        [data-lang] {
+            display: none;
+        }
+        
+        [data-lang="ru"].active {
+            display: block;
+        }
+        
+        [data-lang="kz"].active {
+            display: block;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .brand {
+                font-size: 30px;
+            }
+            
+            .phone {
+                font-size: 20px;
+                padding: 8px 16px;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+                padding: 25px 20px;
+                gap: 20px;
+            }
+            
+            .form-section {
+                padding: 30px 20px;
+            }
+            
+            .lang-btn {
+                padding: 6px 15px;
+                font-size: 12px;
+            }
+            
+            .whatsapp-fixed {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .btn-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp кнопка -->
+    <a href="https://wa.me/77476813454" class="whatsapp-fixed" target="_blank">
+        <span style="font-size: 32px">✆</span>
+    </a>
+
+    <!-- Переключатель языка -->
+    <div class="language-switcher">
+        <button class="lang-btn" onclick="switchLanguage('ru')">РУС</button>
+        <button class="lang-btn" onclick="switchLanguage('kz')">ҚАЗ</button>
+    </div>
+
+    <!-- Основная карточка -->
+    <div class="container">
+        <div class="main-card">
+            <!-- Шапка -->
+            <div class="header">
+                <div class="brand">ЭЛЬМИРА БРОКЕР</div>
+                <div class="subtitle" data-lang="ru">Ипотека в Астане</div>
+                <div class="subtitle" data-lang="kz">Астанадағы ипотека</div>
+                <div class="phone">+7 747 681 34 54</div>
+            </div>
+            
+            <!-- Преимущества -->
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">⏱️</div>
+                    <div class="benefit-title" data-lang="ru">За 2 часа</div>
+                    <div class="benefit-title" data-lang="kz">2 сағатта</div>
+                    <div class="benefit-text" data-lang="ru">Полное одобрение ипотеки</div>
+                    <div class="benefit-text" data-lang="kz">Ипотеканы толық мақұлдау</div>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-title" data-lang="ru">20% взнос</div>
+                    <div class="benefit-title" data-lang="kz">20% төлем</div>
+                    <div class="benefit-text" data-lang="ru">Минимальный первоначальный</div>
+                    <div class="benefit-text" data-lang="kz">Ең төменгі бастапқы</div>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">📄</div>
+                    <div class="benefit-title" data-lang="ru">Без справок</div>
+                    <div class="benefit-title" data-lang="kz">Растау қағазсыз</div>
+                    <div class="benefit-text" data-lang="ru">Без подтверждения дохода</div>
+                    <div class="benefit-text" data-lang="kz">Табысты растаусыз</div>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">🤝</div>
+                    <div class="benefit-title" data-lang="ru">Прямая работа</div>
+                    <div class="benefit-title" data-lang="kz">Тікелей жұмыс</div>
+                    <div class="benefit-text" data-lang="ru">С застройщиками напрямую</div>
+                    <div class="benefit-text" data-lang="kz">Құрылысшылармен тікелей</div>
+                </div>
+            </div>
+            
+            <!-- Форма -->
+            <div class="form-section">
+                <div class="form-title" data-lang="ru">Заявка на ипотеку</div>
+                <div class="form-title" data-lang="kz">Ипотекаға өтініш</div>
+                <div class="form-subtitle" data-lang="ru">
+                    Заполните анкету — мы полностью одобрим ипотеку за 2 часа
+                </div>
+                <div class="form-subtitle" data-lang="kz">
+                    Анкетаны толтырыңыз — біз 2 сағат ішінде ипотеканы толық мақұлдаймыз
+                </div>
+                
+                <form id="mortgageForm">
+                    <!-- ФИО -->
+                    <div class="form-group">
+                        <label class="form-label" data-lang="ru">ФИО *</label>
+                        <label class="form-label" data-lang="kz">Аты-жөні *</label>
+                        <input type="text" class="form-input" id="fullName" required>
+                    </div>
+                    
+                    <!-- Город -->
+                    <div class="form-group">
+                        <label class="form-label" data-lang="ru">Город *</label>
+                        <label class="form-label" data-lang="kz">Қала *</label>
+                        <select class="form-input" id="city" required>
+                            <option value="Астана">Астана</option>
+                            <option value="Алматы">Алматы</option>
+                            <option value="Шымкент">Шымкент</option>
+                            <option value="Другой" data-lang="ru">Другой город</option>
+                            <option value="Другой" data-lang="kz">Басқа қала</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Первоначальный взнос -->
+                    <div class="form-group">
+                        <label class="form-label" data-lang="ru">Первоначальный взнос (20%) есть? *</label>
+                        <label class="form-label" data-lang="kz">Бастапқы төлем (20%) бар ма? *</label>
+                        <div class="btn-group">
+                            <button type="button" class="btn-option btn-yes" data-field="downPayment" data-value="yes">
+                                <span data-lang="ru">Да</span>
+                                <span data-lang="kz">Иә</span>
+                            </button>
+                            <button type="button" class="btn-option btn-no" data-field="downPayment" data-value="no">
+                                <span data-lang="ru">Нет</span>
+                                <span data-lang="kz">Жоқ</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Просрочки -->
+                    <div class="form-group">
+                        <label class="form-label" data-lang="ru">Просрочки за 24 месяца были? *</label>
+                        <label class="form-label" data-lang="kz">Соңғы 24 айда кешігулер болды ма? *</label>
+                        <div class="btn-group">
+                            <button type="button" class="btn-option btn-no" data-field="delays" data-value="yes">
+                                <span data-lang="ru">Да</span>
+                                <span data-lang="kz">Иә</span>
+                            </button>
+                            <button type="button" class="btn-option btn-yes" data-field="delays" data-value="no">
+                                <span data-lang="ru">Нет</span>
+                                <span data-lang="kz">Жоқ</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Трудоустройство -->
+                    <div class="form-group">
+                        <label class="form-label" data-lang="ru">Официально работаете? *</label>
+                        <label class="form-label" data-lang="kz">Ресми жұмыс істейсіз бе? *</label>
+                        <div class="btn-group">
+                            <button type="button" class="btn-option btn-yes" data-field="job" data-value="yes">
+                                <span data-lang="ru">Да</span>
+                                <span data-lang="kz">Иә</span>
+                            </button>
+                            <button type="button" class="btn-option btn-no" data-field="job" data-value="no">
+                                <span data-lang="ru">Нет</span>
+                                <span data-lang="kz">Жоқ</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Кнопка отправки -->
+                    <button type="submit" class="submit-btn">
+                        <span data-lang="ru">📱 Отправить заявку в WhatsApp</span>
+                        <span data-lang="kz">📱 WhatsApp-ке өтініш жіберу</span>
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 15px; font-size: 12px; color: #6b7280;">
+                        <span data-lang="ru">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</span>
+                        <span data-lang="kz">Батырманы басу арқылы сіз жеке деректерді өңдеуге келісесіз</span>
+                    </p>
+                </form>
+            </div>
+            
+            <!-- Футер (БЕЗ 2024 ГОДА) -->
+            <div class="footer">
+                <div class="footer-brand">ЭЛЬМИРА БРОКЕР</div>
+                <div class="footer-text" data-lang="ru">Профессиональный ипотечный брокер в Астане</div>
+                <div class="footer-text" data-lang="kz">Астанадағы кәсіби ипотекалық брокер</div>
+                <div class="footer-text">+7 747 681 34 54</div>
+                <div class="footer-text" data-lang="ru">Работаем с застройщиками напрямую</div>
+                <div class="footer-text" data-lang="kz">Құрылысшылармен тікелей жұмыс істейміз</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Текущий язык
+        let currentLang = 'ru';
+        
+        // Переключение языка
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Скрыть все элементы с data-lang
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Показать элементы с выбранным языком
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+                el.classList.add('active');
+            });
+            
+            // Обновить опции в селекте города
+            const citySelect = document.getElementById('city');
+            Array.from(citySelect.options).forEach(option => {
+                if (option.value === 'Другой') {
+                    option.textContent = lang === 'ru' ? 'Другой город' : 'Басқа қала';
+                }
+            });
+        }
+        
+        // Инициализация формы
+        const formData = {
+            fullName: '',
+            city: 'Астана',
+            downPayment: null,
+            delays: null,
+            job: null
+        };
+        
+        // Обработчики кнопок
+        document.querySelectorAll('.btn-option').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const field = this.dataset.field;
+                const value = this.dataset.value;
+                
+                // Убираем выделение у всех кнопок в этой группе
+                const group = this.parentElement;
+                group.querySelectorAll('.btn-option').forEach(b => {
+                    b.classList.remove('selected');
+                });
+                
+                // Выделяем нажатую кнопку
+                this.classList.add('selected');
+                
+                // Сохраняем данные
+                formData[field] = value;
+            });
+        });
+        
+        // Обработчики полей ввода
+        document.getElementById('fullName').addEventListener('input', function(e) {
+            formData.fullName = e.target.value;
+        });
+        
+        document.getElementById('city').addEventListener('change', function(e) {
+            formData.city = e.target.value;
+        });
+        
+        // Отправка формы
+        document.getElementById('mortgageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Проверка
+            const errors = [];
+            if (!formData.fullName.trim()) errors.push(currentLang === 'ru' ? 'Укажите ФИО' : 'Аты-жөніңізді көрсетіңіз');
+            if (!formData.downPayment) errors.push(currentLang === 'ru' ? 'Укажите про взнос' : 'Төлем туралы көрсетіңіз');
+            if (!formData.delays) errors.push(currentLang === 'ru' ? 'Укажите про просрочки' : 'Кешігулер туралы көрсетіңіз');
+            if (!formData.job) errors.push(currentLang === 'ru' ? 'Укажите про работу' : 'Жұмыс туралы көрсетіңіз');
+            
+            if (errors.length > 0) {
+                alert((currentLang === 'ru' ? 'Заполните все поля:\n' : 'Барлық өрістерді толтырыңыз:\n') + errors.join('\n'));
+                return;
+            }
+            
+            // Формируем сообщение на нужном языке
+            let message;
+            if (currentLang === 'ru') {
+                message = `🏦 Заявка на ипотеку%0A%0A` +
+                         `👤 ФИО: ${formData.fullName}%0A` +
+                         `🏙️ Город: ${formData.city}%0A` +
+                         `💰 Взнос 20%: ${formData.downPayment === 'yes' ? 'Да' : 'Нет'}%0A` +
+                         `⏰ Просрочки: ${formData.delays === 'yes' ? 'Да' : 'Нет'}%0A` +
+                         `💼 Работа: ${formData.job === 'yes' ? 'Да' : 'Нет'}%0A%0A` +
+                         `📞 Телефон: +7 747 681 34 54%0A` +
+                         `🌐 Язык заявки: Русский%0A` +
+                         `🔗 Отправлено с сайта: Эльмира Брокер`;
+            } else {
+                message = `🏦 Ипотекаға өтініш%0A%0A` +
+                         `👤 Аты-жөні: ${formData.fullName}%0A` +
+                         `🏙️ Қала: ${formData.city}%0A` +
+                         `💰 Төлем 20%: ${formData.downPayment === 'yes' ? 'Иә' : 'Жоқ'}%0A` +
+                         `⏰ Кешігулер: ${formData.delays === 'yes' ? 'Иә' : 'Жоқ'}%0A` +
+                         `💼 Жұмыс: ${formData.job === 'yes' ? 'Иә' : 'Жоқ'}%0A%0A` +
+                         `📞 Телефон: +7 747 681 34 54%0A` +
+                         `🌐 Өтініш тілі: Қазақша%0A` +
+                         `🔗 Сайттан жіберілді: Эльмира Брокер`;
+            }
+            
+            // Открываем WhatsApp
+            window.open(`https://wa.me/77476813454?text=${message}`, '_blank');
+            
+            // Очищаем форму
+            formData.fullName = '';
+            formData.downPayment = null;
+            formData.delays = null;
+            formData.job = null;
+            
+            document.getElementById('fullName').value = '';
+            document.getElementById('city').value = 'Астана';
+            document.querySelectorAll('.btn-option.selected').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            
+            // Красивое уведомление
+            const alertMsg = currentLang === 'ru' 
+                ? '✅ Заявка отправлена!\nПроверьте WhatsApp для продолжения.' 
+                : '✅ Өтініш жіберілді!\nЖалғастыру үшін WhatsApp-ті тексеріңіз.';
+            
+            alert(alertMsg);
+        });
+        
+        // Инициализация при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLanguage('ru');
+        });
+    </script>
+</body>
+</html>
